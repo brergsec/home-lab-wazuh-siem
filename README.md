@@ -112,6 +112,8 @@ Dashboard confirmed showing 1 active agent reporting security events.
 
 ## 🗺️ Next Steps
 
+⚠️ Pending: Make KVM blacklist persistent (/etc/modprobe.d/blacklist-kvm.conf) to avoid running modprobe -r manually after every reboot.
+
 - [ ] Simulate attack scenarios and observe detections in the Dashboard
 - [ ] Write custom Wazuh detection rules
 - [ ] Explore MITRE ATT&CK mapping within Wazuh
