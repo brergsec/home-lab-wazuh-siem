@@ -354,6 +354,9 @@ The Wazuh SIEM lab is fully operational with:
 - Wazuh Agent deployed on the host machine and actively reporting
 - All credentials rotated and firewall configured post-installation
 ## Next Steps
+
+⚠️ Pending: Make KVM blacklist persistent (/etc/modprobe.d/blacklist-kvm.conf) to avoid running modprobe -r manually after every reboot.
+
 - Simulate attack scenarios and observe detection in the Dashboard
 - Configure custom detection rules
 - Explore MITRE ATT&CK mapping within Wazuh
