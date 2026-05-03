@@ -213,7 +213,10 @@ sudo ufw status verbose
 | 1514    | TCP      | Agent to Manager communication |
 | 1515    | TCP      | Agent enrollment               |
 | 22      | TCP      | SSH access                     |
+
 ⚠️**note:** I only allowed port 22 because i'm using SSH.
+
+⚠️ Note: SSH is unrestricted by source IP. Acceptable in a Host-Only environment — restrict to ufw allow from <HOST_IP> to any port 22 if the network adapter is ever changed to Bridged.
 
 **Result:** Firewall active. All ports not listed above are blocked by default.
 Dashboard and agent communication confirmed working after UFW activation.
