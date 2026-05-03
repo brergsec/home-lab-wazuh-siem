@@ -158,7 +158,7 @@ trusted certificate authority.
 
 **Result:** Successfully logged into the Wazuh Dashboard.
 
-![](../assets/14.png)
+![](../assets/11.1.png)
 
 ---
 ## Step 3.3 - Hardening: Rotating Default Credentials
@@ -297,10 +297,10 @@ any time via Machine > Restore Snapshot.
 
 click the *Add agent* option where my cursor is pointing in the picture below:
 
-![[Pasted image 20260501135924.png]]
+![](../assets/11.1.png)
 
 it should display this deploy agent interface:
-![[Pasted image 20260501142332.png]]
+![](../assets/11.2.png)
 
 I marked DEB amd64 because I'm using a Debian in my Host
 Then I pasted my VM Host-only IP in the server address field
