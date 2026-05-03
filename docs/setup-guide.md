@@ -30,7 +30,7 @@ sudo dpkg -i virtualbox-7.2_7.2.8-173730~Debian~trixie_amd64.deb
 **Issue 1:** VirtualBox kernel module (vboxdrv) failed to load 
 and missing Qt6 shared library prevented the GUI from launching.
 
-![[1.png]]
+![](../assets/1.png)
 
 **Solution:**
 ```bash
@@ -46,7 +46,7 @@ Without it, VirtualBox cannot create or run virtual machines.
 
 **Issue 2:** Broken dependencies.
 
-![[2.1.png]]
+![](../assets/2.1.png)
 
 **Solution:**
 ```bash
@@ -67,7 +67,7 @@ without errors.
 
 I downloaded it by going in https://ubuntu.com/download/server and clicking the Download button as showed below:
 
-![[Pasted image 20260426124428.png]]
+![](../assets/3.png)
 
 Then it started downloading **ubuntu-26.04-live-server-amd64.iso** (the lab OS).
 
@@ -83,13 +83,13 @@ Then it started downloading **ubuntu-26.04-live-server-amd64.iso** (the lab OS).
 
 **why these specs:** Wazuh Manager requires at least 4GB RAM and 2 CPUs cores to run the indexer and dashboard simultaneously.
 
-![[4.png]]
+![](../assets/4.png)
 
-![[8.png]]
+![](../assets/8.png)
 
-![[Pasted image 20260501194222.png]]
+![](../assets/8.5.png)
 
-![[9.png]]
+![](../assets/9.png)
 
 ---
 ## 2.3 - Issue found trying to boot the VM
@@ -112,7 +112,7 @@ sudo modprobe -r kvm_intel & sudo modprobe -r kvm
 
 **Result:** Working Fine
 
-![[10.png]]
+![](../assets/10.png)
 
 ---
 ## Step 3 - Installing Wazuh
@@ -137,7 +137,7 @@ sudo systemctl list-units | grep wazuh
 ```
 **why:** This allow us to see if the wazuh services are active and running
 
-![[11.png]]
+![](../assets/11.png)
 
 Working fine!
 
@@ -158,7 +158,7 @@ trusted certificate authority.
 
 **Result:** Successfully logged into the Wazuh Dashboard.
 
-![[Pasted image 20260426173136.png]]
+![](../assets/14.png)
 
 ---
 ## Step 3.3 - Hardening: Rotating Default Credentials
@@ -305,11 +305,12 @@ it should display this deploy agent interface:
 I marked DEB amd64 because I'm using a Debian in my Host
 Then I pasted my VM Host-only IP in the server address field
 
-![[12.png]]
+![](../assets/12.png)
 
 You can insert an agent name if you want and add it to a specific group as shown above.
 
-![[13.png]]
+![](../assets/13.png)
+
 Then copy the generated installation command and pasted it inside the terminal, my installation command generated with my specifications:
 
 **Installation command (run on host):** 
@@ -339,7 +340,7 @@ sudo systemctl start wazuh-agent
 
 **Result:** Agent registered and active. Wazuh Dashboard showing 1 active agent collecting security events from the host machine.
 
-![[Pasted image 20260501142856.png]]
+![](../assets/15.png)
 
 ---
 ## Conclusion
